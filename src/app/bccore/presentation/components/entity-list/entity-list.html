@@ -1,0 +1,7 @@
+<div class="entity-grid" role="list">
+  @for (entity of entitys(); track entity.id) {
+    <app-entity-item [entity]="entity" role="listitem"></app-entity-item>
+  } @empty {
+    <p role="status">{{ 'entity.loading' | translate }}</p>
+  }
+</div>

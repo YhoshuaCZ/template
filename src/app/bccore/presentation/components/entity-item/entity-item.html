@@ -1,0 +1,22 @@
+<mat-card class="entity-card" tabindex="0">
+  <img mat-card-image [src]="entity().image" [alt]="entity().title" class="obs-image">
+
+  <mat-card-header>
+    <mat-card-title>{{ entity().title }}</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <br>
+    <h2><strong>{{'entity.type' | translate }}:</strong> {{ entity().type}} </h2>
+    <p><strong>{{ 'entity.episodes' | translate }}:</strong> {{ entity().episodes }}</p>
+    <p><strong>{{ 'entity.status' | translate }}:</strong> {{ entity().status }}</p>
+    <p><strong>{{ 'entity.score' | translate }}:</strong> {{ entity().score }}</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <a mat-button color="primary" [href]="'https://api.jikan.moe/v4/anime\n/' + entity().id" target="_blank">
+      {{ 'entity.details' | translate }}
+    </a>
+  </mat-card-actions>
+
+</mat-card>
